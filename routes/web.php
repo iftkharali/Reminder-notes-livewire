@@ -1,6 +1,8 @@
 <?php
+namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RemindersController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +18,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/home', [RemindersController::class, 'index']);
